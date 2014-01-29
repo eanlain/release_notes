@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'release_notes/cli'
+ReleaseNotes::CLI.start

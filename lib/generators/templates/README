@@ -1,0 +1,11 @@
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Something here...
+
+  2. You can copy ReleaseNotes views (for customization) to your app by running:
+
+       rails g release_notes:views
+
+===============================================================================
