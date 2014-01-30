@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["brandon@ourlabel.com"]
   spec.summary       = "An easy way to incorporate and manage release notes."
   spec.description   = "An easy way to incorporate and manage release notes."
-  spec.homepage      = ""
+  spec.homepage      = "http://www.github.com/eanlain/release_notes"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,11 +20,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.5"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", "~> 10.1.1"
   spec.add_development_dependency "rspec", "~> 2.14"
-  spec.add_development_dependency "cucumber"
-  spec.add_development_dependency "aruba"
+  spec.add_development_dependency "cucumber", "~> 1.3.10"
+  spec.add_development_dependency "aruba", "~> 0.5.4"
 
-  spec.add_dependency "thor"
+  spec.add_dependency "thor", "~> 0.18.1"
   spec.add_dependency "rails", "~> 4.0.0"
+  spec.add_dependency "github-markup"
+  spec.add_dependency "redcarpet"
 end

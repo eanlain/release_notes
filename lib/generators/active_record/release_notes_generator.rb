@@ -38,9 +38,9 @@ module ActiveRecord
 
       def migration_data
 <<RUBY
-      t.text :content,      :null => false
+      t.text :markdown,     :null => false
+      t.text :html_content, :null => false
       t.string :version,    :null => false
-      t.string :last_commit
 RUBY
       end
     end

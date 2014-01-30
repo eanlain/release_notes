@@ -2,7 +2,9 @@
 
 Some setup you must do manually if you haven't yet:
 
-  1. Something here...
+  1. Create a ReleaseNote model by running:
+
+      rails g release_notes ReleaseNote
 
   2. You can copy ReleaseNotes views (for customization) to your app by running:
 
