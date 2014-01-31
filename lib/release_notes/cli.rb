@@ -1,5 +1,6 @@
 require 'thor'
 require 'release_notes'
+require 'release_notes/version'
 require 'release_notes/versioning'
 require 'release_notes/cli/helpers'
 require 'release_notes/generators/release_note'
