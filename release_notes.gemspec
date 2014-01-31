@@ -27,5 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor", "~> 0.18.1"
   spec.add_dependency "rails", "~> 4.0.0"
-  spec.add_dependency "redcarpet"
+  spec.add_dependency "redcarpet", "~> 3.0.0"
 end
