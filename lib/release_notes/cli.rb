@@ -1,5 +1,4 @@
 require 'thor'
-require 'github/markup'
 require 'release_notes'
 require 'release_notes/versioning'
 require 'release_notes/cli/helpers'
