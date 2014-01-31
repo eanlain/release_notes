@@ -1,7 +1,7 @@
 # Use this hook to configure ReleaseNotes.
 ReleaseNotes.setup do |config|
   # The name of your application.
-  config.app_name = 'AppNameGoesHere'
+  config.app_name = 'Application Name Goes Here'
 
   # The name of the model you're using to store the various release notes.
   config.release_note_model = 'ReleaseNote'

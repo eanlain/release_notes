@@ -19,7 +19,7 @@ module ReleaseNotes
 
         def interactive_bullets(message)
           say "Enter in the letter type of bullet followed by the bullet's text (i.e. 'a: This is a simple addition bullet')", :yellow
-          say "Bullet types are as follows => Additions, Changes, Improvements, Removals, Fixes, Bugs/Known Issues, Upcoming", :yellow
+          say "Bullet types are as follows => (a)dditions, (c)hanges, (i)mprovements, (r)emovals, (f)ixes, (b)ugs/Known Issues, (u)pcoming", :yellow
           say "When you are finished type 'done' to finish.", :cyan
           
           loop do

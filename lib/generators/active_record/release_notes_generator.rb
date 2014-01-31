@@ -39,7 +39,6 @@ module ActiveRecord
       def migration_data
 <<RUBY
       t.text :markdown,     :null => false
-      t.text :html_content, :null => false
       t.string :version,    :null => false
 RUBY
       end

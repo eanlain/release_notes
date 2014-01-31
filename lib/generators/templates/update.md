@@ -69,4 +69,4 @@ Upcoming
 <% end -%>
 <% end -%>
 
-<em>the end</em>
+*the end*

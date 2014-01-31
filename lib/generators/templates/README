@@ -1,13 +1,20 @@
-===============================================================================
+======================================================================================
 
 Some setup you must do manually if you haven't yet:
 
-  1. Create a ReleaseNote model by running:
+  1. Check/update ReleaseNote initializer file (config/initializers/release_notes.rb).
+      At a minimum you may want to update the app_name... or not...
+
+  2. Create a ReleaseNote model by running:
 
       rails g release_notes ReleaseNote
 
-  2. You can copy ReleaseNotes views (for customization) to your app by running:
+  3. Migrate your newly created ReleaseNote model:
+
+      rake db:migrate
+
+  4. You can copy ReleaseNotes views (for customization) to your app by running:
 
        rails g release_notes:views
 
-===============================================================================
+======================================================================================

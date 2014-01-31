@@ -44,7 +44,7 @@ module ReleaseNotes
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :no_log, :aliases => '-n', :type => :boolean, :default => false, :desc => 'disable README.md log of release notes'
     method_option :reset, :aliases => '-r', :type => :boolean, :default => false, :desc => 'delete all model entries and rebuilds them'
-    method_option :version, :aliases => '-V', :desc => 'update only the given version number'
+    # method_option :version, :aliases => '-V', :desc => 'update only the given version number'
 
     def update
       # If reset option is passed delete all release notes in model
@@ -90,10 +90,8 @@ module ReleaseNotes
 
         file = file.join('_')
         markdown = File.read("#{options[:destination]}/#{file}")
-        html = GitHub::Markup.render(file, markdown)
         ReleaseNotes.release_note_model.constantize.create(version: version,
-                                                           markdown: markdown,
-                                                           html_content: html)
+                                                           markdown: markdown)
 
         release_log.insert(0, "#{markdown}\n\n---\n\n") unless options[:no_log]
       end

@@ -1,0 +1,11 @@
+<% @release_notes.each do |rn| %>
+  <div class="release">
+    <div class="row note">
+      <div class="col-sm-12">
+        <div class="markdown-body">
+          <%= markup(rn.markdown).html_safe %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

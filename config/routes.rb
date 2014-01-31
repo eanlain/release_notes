@@ -1,3 +1,4 @@
 ReleaseNotes::Engine.routes.draw do
-  root :to => "release_notes#index"
+  get '/' => 'release_notes#index'
+  get '/:version' => 'release_notes#show'
 end
