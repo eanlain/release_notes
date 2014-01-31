@@ -1,14 +1,11 @@
 #!/usr/bin/env ruby
 
-require './config/application.rb'
-Rails.application.require_environment!
-
-require 'release_notes/cli'
-
 begin
-  load "./config/initializers/release_notes.rb"
+  require File.expand_path('config/environment.rb')
+  require File.expand_path('config/initializers/release_notes.rb')
 rescue LoadError
-  puts "Can't find config/initializers/release_notes.rb - using default settings instead."
+  puts "Not in Rails root, or just can't find it... that's cool though - using default settings instead."
 end
 
+require 'release_notes/cli'
 ReleaseNotes::CLI.start

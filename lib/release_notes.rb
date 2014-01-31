@@ -9,9 +9,13 @@ module ReleaseNotes
   mattr_accessor :starting_version
   @@starting_version = '0.1.0'
 
-  # Model name of the model created to store ReleaseNotes.
+  # Model name of the model created to store release notes.
   mattr_accessor :release_note_model
   @@release_note_model = 'ReleaseNote'
+
+  # Name of the folder where release notes are stored.
+  mattr_accessor :release_note_folder
+  @@release_note_folder = 'release_notes'
 
   # Default way to setup ReleaseNotes. Run rails g release_notes:install
   # to create a fresh initializer with all configuration values.

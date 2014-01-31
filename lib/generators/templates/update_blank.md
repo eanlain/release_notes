@@ -1,7 +1,7 @@
 # <%= @app_name -%> <%= @release_version.gsub('_', '.') -%> Release Notes
-#### <%= Time.now.utc.strftime('%m/%d/%Y') %>
-
 ###### A one (or two) sentence overview blurb of this release.
+
+#### <%= Time.now.utc.strftime('%m/%d/%Y') %>
 
 Additions
 ----

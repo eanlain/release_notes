@@ -34,7 +34,7 @@ To create a new release note run the following:
 
     $ release_notes new
 
-A new release note markdown file will be generated in the `release_notes` folder. Open the file in your favorite editor a fill out the relevant sections to your heart's content.
+A new release note markdown file will be generated in the `release_notes` folder. Open the file in your favorite editor and fill out the relevant sections to your heart's content.
 
 To add release notes bullets through the console try the following:
 

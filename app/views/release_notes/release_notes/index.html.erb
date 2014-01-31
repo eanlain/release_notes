@@ -1,2 +1,9 @@
-<%= @release_notes.inspect %>
-<%= Rails.application.class.parent_name %>
+<% @release_notes.each do |rn| %>
+  <div class="row note">
+    <div class="col-sm-12">
+      <div>
+        <%= rn.html_content.html_safe %>
+      </div>
+    </div>
+  </div>
+<% end %>

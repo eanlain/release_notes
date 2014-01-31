@@ -54,18 +54,6 @@ ERROR
         template(@update_template, @filename)
       end
 
-      # def append_to_README
-      #   contents = File.read(@filename)
-
-      #   begin
-      #     oldREADME = File.read("#{destination}/README.md")
-      #     contents << "\n\n---\n\n#{oldREADME}"
-      #     File.write("#{destination}/README.md", "#{contents}", mode: 'w')
-      #   rescue Errno::ENOENT
-      #     File.write("#{destination}/README.md", "#{contents}", mode: 'w')
-      #   end
-      # end
-
       protected
         def next_update_number(dirname)
           next_update_number = current_update_number(dirname) + 1

@@ -1,10 +1,9 @@
-include Thor::Shell
-
 module ReleaseNotes
   class CLI < Thor
     class Helpers
-
       class << self
+        include Thor::Shell
+
         def setup_message_obj
           message = {}
           message['overview'] = ""

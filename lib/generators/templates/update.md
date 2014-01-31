@@ -1,10 +1,10 @@
 # <%= @app_name -%> <%= @release_version.gsub('_', '.') -%> Release Notes
-#### <%= Time.now.utc.strftime('%m/%d/%Y') %>
-
 <% if @message['overview'].length > 0 -%>
 ###### <%= @message['overview'] -%>
 
 <% end -%>
+
+#### <%= Time.now.utc.strftime('%m/%d/%Y') %>
 
 <% if !@message['additions'].empty? -%>
 Additions
