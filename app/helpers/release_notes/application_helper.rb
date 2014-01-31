@@ -1,5 +1,7 @@
 module ReleaseNotes
   module ApplicationHelper
+    require 'redcarpet'
+    
     def markup(markdown)
       extension_options = [:no_intra_emphasis => true,
                            :tables => true,
