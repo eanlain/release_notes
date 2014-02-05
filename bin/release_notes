@@ -4,7 +4,7 @@ begin
   require File.expand_path('config/environment.rb')
   require File.expand_path('config/initializers/release_notes.rb')
 rescue LoadError
-  puts "Not in Rails root, or just can't find it... that's cool though - using default settings instead."
+  puts "Can't find config/initializers/release_notes.rb... that's cool though - using default settings instead."
 end
 
 require 'release_notes/cli'

@@ -13,9 +13,17 @@ module ReleaseNotes
   mattr_accessor :release_note_model
   @@release_note_model = 'ReleaseNote'
 
+  # Model name of the model created to store broadcasts.
+  mattr_accessor :broadcast_model
+  @@broadcast_model = 'Broadcast'
+
   # Name of the folder where release notes are stored.
   mattr_accessor :release_note_folder
   @@release_note_folder = 'release_notes'
+
+  # Path that ReleaseNotes::Engine is mounted at in the config/routes.rb file.
+  mattr_accessor :mount_at
+  @@mount_at = 'release_notes'
 
   # Default way to setup ReleaseNotes. Run rails g release_notes:install
   # to create a fresh initializer with all configuration values.

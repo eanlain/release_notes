@@ -1,10 +1,17 @@
 module ReleaseNotes
   module Generators
     module OrmHelpers
-      def model_contents
+      def release_notes_model_contents
         buffer = <<-CONTENT
-  validates :version, presence: true,
-                      uniqueness: true
+  validates :version, presence: true, uniqueness: true
+CONTENT
+        buffer
+      end
+
+      def broadcasts_model_contents
+        buffer = <<-CONTENT
+  validates :message, presence: true
+  validates :version, presence: true, uniqueness: true
 CONTENT
         buffer
       end

@@ -28,7 +28,7 @@ module ReleaseNotes
         end
       end
 
-      def create_update_file
+      def create_directory
         empty_directory(@destination)
       end
 

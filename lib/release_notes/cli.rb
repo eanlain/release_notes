@@ -4,6 +4,7 @@ require 'release_notes/version'
 require 'release_notes/versioning'
 require 'release_notes/cli/helpers'
 require 'release_notes/generators/release_note'
+require 'release_notes/generators/broadcast'
 
 module ReleaseNotes
   class CLI < Thor
@@ -15,7 +16,7 @@ module ReleaseNotes
     desc 'new', 'create a new release note'
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :force, :aliases => '-f',  :type => :boolean, :desc => 'overwrite files that already exist'
-    method_option :increment, :aliases => '-i', :default => 'patch', :banner => 'MODE', :desc => 'increment version by mode'
+    method_option :increment, :aliases => '-i', :default => 'patch', :banner => 'MODE', :desc => 'increment version by mode - "major", "minor", "patch"'
     method_option :message, :aliases => '-m', :desc => 'interactive release note bullet input'
     method_option :version, :aliases => '-V', :desc => 'use the given version number'
 
@@ -34,13 +35,25 @@ module ReleaseNotes
       end
 
       ReleaseNotes::Generators::ReleaseNote.start([options[:destination],
-                                             message,
-                                             update_version,
-                                             "--force=#{options[:force] || false}"])
+                                                   message,
+                                                   update_version,
+                                                   "--force=#{options[:force] || false}"])
     end
 
 
-    desc 'update', "update #{ReleaseNotes.release_note_model} model"
+    desc 'broadcast', 'create a new broadcast'
+    method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
+    method_option :body, :aliases => '-b', :default => "We've made some new changes - check 'em out!", :desc => 'body of broadcast'
+    method_option :subject, :aliases => '-s', :default => "New Update", :desc => 'subject of broadcast'
+
+    def broadcast
+      ReleaseNotes::Generators::Broadcast.start([options[:destination],
+                                                 options[:subject],
+                                                 options[:body]])
+    end
+
+
+    desc 'update', "update #{ReleaseNotes.release_note_model} models"
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :no_log, :aliases => '-n', :type => :boolean, :default => false, :desc => 'disable README.md log of release notes'
     method_option :reset, :aliases => '-r', :type => :boolean, :default => false, :desc => 'delete all model entries and rebuilds them'

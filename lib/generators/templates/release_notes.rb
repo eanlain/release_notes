@@ -1,14 +1,20 @@
 # Use this hook to configure ReleaseNotes.
 ReleaseNotes.setup do |config|
-  # The name of your application.
+  # Name of your application.
   config.app_name = 'Application Name Goes Here'
 
-  # The name of the model you're using to store the various release notes.
+  # Name of the model you're using to store the various release notes.
   config.release_note_model = 'ReleaseNote'
 
-  # The name of the folder you're using to store the release note markdown files.
+  # Name of the model you're using to store broadcasts.
+  config.broadcast_model = 'Broadcast'
+
+  # Name of the folder you're using to store the release note and broadcast markdown files.
   config.release_note_folder = 'release_notes'
 
-  # The version number that the first ReleaseNote should start at.
+  # Path that ReleaseNotes::Engine is mounted at in the config/routes.rb file.
+  config.mount_at = 'release_notes'
+
+  # Version number that the first ReleaseNote should start at.
   config.starting_version = '0.1.0'
 end

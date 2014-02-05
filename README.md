@@ -32,7 +32,29 @@ Be sure to migrate your database.
 
     $ rake db:migrate
 
-*Optional:* While not necessary, you may want to copy over the ReleaseNotes views to your app to customize:
+
+### Optional
+
+#### Broadcasts
+
+To add the Broadcasts module...
+
+    $ rails generate release_notes:broadcasts Broadcast
+
+This will generate a model named `Broadcast` in your Rails project. As mentioned before, you can choose to use a different model name, but remember to edit the `config/initializers/release_notes.rb` file with the name.
+
+After generating the Broadcast model you should generate a migration to add the last_visit field to your User model.
+
+    $ rails generate release_notes:last_visit User
+
+Migrate your database.
+
+    $ rake db:migrate
+
+
+#### Views
+
+While not necessary, you may want to copy over the ReleaseNotes views to your app to customize:
 
     $ rails generate release_notes:views
 
