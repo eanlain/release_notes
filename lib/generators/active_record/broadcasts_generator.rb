@@ -13,7 +13,7 @@ module ActiveRecord
         if (behavior == :invoke && model_exists?)
           raise "#{table_name} already exists..."
         else
-          migration_template "broadcasts_migration.rb", "db/migrate/release_notes_broadcasts_create_#{table_name}"
+          migration_template "broadcasts_migration.rb", "db/migrate/release_notes_create_#{table_name}"
         end
       end
 
@@ -39,7 +39,6 @@ module ActiveRecord
       def migration_data
 <<RUBY
       t.text :markdown,     :null => false
-      t.text :html,
       t.string :version,    :null => false
 RUBY
       end

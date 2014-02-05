@@ -10,7 +10,7 @@ CONTENT
 
       def broadcasts_model_contents
         buffer = <<-CONTENT
-  validates :message, presence: true
+  validates :markdown, presence: true
   validates :version, presence: true, uniqueness: true
 CONTENT
         buffer
