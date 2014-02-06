@@ -12,6 +12,18 @@
  *= require_directory .
  */
 
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -35,6 +47,7 @@ body {
 }
 
 .footer {
+  height: 60px;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
@@ -56,6 +69,7 @@ body {
 
 .note {
   margin: 40px 0;
+  border-radius: 10px;
 }
 
 .note p + h4 {

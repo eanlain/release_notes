@@ -4,18 +4,19 @@ module ReleaseNotes
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :body, :aliases => '-b', :default => "We've made some new changes - check 'em out!", :desc => 'body of broadcast'
     method_option :subject, :aliases => '-s', :default => "New Update", :desc => 'subject of broadcast'
+    method_option :release_note_version, :aliases => '-r', :desc => 'corresponding release note version'
 
     def new
       ReleaseNotes::Generators::Broadcast.start([options[:destination],
                                                  options[:subject],
-                                                 options[:body]])
+                                                 options[:body],
+                                                 options[:release_note_version]])
     end
 
 
     desc 'update', "Update #{ReleaseNotes.broadcast_model} models"
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :reset, :aliases => '-r', :type => :boolean, :default => false, :desc => 'delete all model entries and rebuilds them'
-    # method_option :version, :aliases => '-V', :desc => 'update only the given version number'
 
     def update
       # If reset option is passed delete all broadcasts in model

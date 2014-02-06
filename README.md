@@ -32,25 +32,27 @@ Be sure to migrate your database.
 
     $ rake db:migrate
 
-
 ### Optional
 
 #### Broadcasts
 
-To add the Broadcasts module...
+To add the ability to display broadcasts of new releases (or any other messages) run the following:
 
     $ rails generate release_notes:broadcasts Broadcast
 
 This will generate a model named `Broadcast` in your Rails project. As mentioned before, you can choose to use a different model name, but remember to edit the `config/initializers/release_notes.rb` file with the name.
 
-After generating the Broadcast model you should generate a migration to add the last_visit field to your User model.
-
-    $ rails generate release_notes:last_visit User
-
 Migrate your database.
 
     $ rake db:migrate
 
+Add the following to your layout/application.html.erb file
+
+    <%= stylesheet_link_tag "release_notes/application", media: "all" %>
+
+Then add the following render to wherever you'd like to display the broadcast message.
+
+    <%= render 'release_notes/broadcasts/shared' %>
 
 #### Views
 
@@ -87,6 +89,22 @@ If you ever want to reset your model - maybe you've gone back and edited a previ
 ### View release notes in your application
 
 To view all of your release notes just visit `http://yourapp/release_notes` (or whatever route is mounted in your `routes.rb` file) in your application. To view a specific version just visit `http://yourapp/release_notes/:version` where `:version` is the release notes version that you are looking to view using underscores instead of periods (i.e. `0_1_0`).
+
+### Create a new Broadcast
+
+To create a new Broadcast run:
+
+    $ release_notes broadcast new
+
+This will generate a broadcast markdown file which you can edit.
+
+### Update Broadcast
+
+After finalizing your broadcast markdown file be sure to update your Broadcast model by running:
+
+    $ release_notes broadcast update
+
+If you ever want to reset your model - maybe you've gone back and edited a previous release note - you can rebuild the Broadcast model by running `release_notes broadcast update -r` appending the `-r` option.
 
 ## Contributing
 

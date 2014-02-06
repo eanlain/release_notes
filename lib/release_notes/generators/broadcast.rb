@@ -8,12 +8,14 @@ module ReleaseNotes
       argument :destination, :type => :string
       argument :subject, :type => :string
       argument :body, :type => :string
+      argument :release_note_version, :type => :string
 
       source_root File.expand_path('../../../generators/templates', __FILE__)
 
       def set_local_assigns
         @subject = subject
         @body = body
+        @release_note_version = release_note_version.gsub('.', '_')
         @broadcast_template = 'broadcast_blank.md'
         @destination = File.expand_path(destination)
       end
