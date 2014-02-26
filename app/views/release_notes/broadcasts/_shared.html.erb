@@ -2,9 +2,4 @@
   <div>
     <%= markup(ReleaseNotes.broadcast_model.constantize.last.markdown).html_safe %>
   </div>
-  <div>
-    <a href="/<%= ReleaseNotes.mount_at %>">
-      View all release notes
-    </a>
-  </div>
 <% end %>
