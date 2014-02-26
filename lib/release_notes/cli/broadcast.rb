@@ -51,6 +51,21 @@ module ReleaseNotes
       say "#{ReleaseNotes.broadcast_model} model successfully updated.", :green
     end
 
+
+    desc 'users', "Update #{ReleaseNotes.user_broadcast_model} models"
+
+    def users
+      all_users = ReleaseNotes.user_model.constantize.all
+      last_broadcast = ReleaseNotes.broadcast_model.constantize.last
+
+      user_id_field = ReleaseNotes.user_broadcast_model.underscore.split('_').first()
+      broadcast_id_field = ReleaseNotes.user_broadcast_model.underscore.split('_').last().singularize
+
+      all_users.each do |u|
+        ReleaseNotes.user_broadcast_model.constantize.create("#{user_id_field}_id".to_sym => u.id, "#{broadcast_id_field}_id".to_sym => last_broadcast.id)
+      end
+    end
+
     protected
       def collect_broadcast_files(dirname)
         broadcast_lookup_at(dirname).collect do |file|
