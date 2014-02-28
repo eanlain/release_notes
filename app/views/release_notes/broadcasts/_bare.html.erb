@@ -1,1 +1,5 @@
-<%= render 'release_notes/broadcasts/shared' %>
+<% if ReleaseNotes.broadcast_model.constantize.last %>
+  <div>
+    <%= markup(ReleaseNotes.broadcast_model.constantize.last.markdown).html_safe %>
+  </div>
+<% end %>
