@@ -106,11 +106,11 @@ module ReleaseNotes
       end
 
       def broadcast_lookup_at(dirname)
-        Dir.glob("#{dirname}/*_[0-9]*.md")
+        Dir.glob("#{dirname}/broadcast_[0-9]*.md")
       end
 
       def single_broadcast_lookup_at(dirname, version)
-        File.basename(Dir.glob("#{dirname}/*_#{version}*.md")[0])
+        File.basename(Dir.glob("#{dirname}/broadcast_#{version}*.md")[0])
       end
   end
 end
