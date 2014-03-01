@@ -9,6 +9,12 @@ ReleaseNotes.setup do |config|
   # Name of the model you're using to store broadcasts.
   config.broadcast_model = 'Broadcast'
 
+  # Name of the model you're using to store users.
+  config.user_model = 'User'
+
+  # Name of the model you're using to store broadcasts for users.
+  config.user_broadcast_model = 'UserBroadcast'
+
   # Name of the folder you're using to store the release note and broadcast markdown files.
   config.release_note_folder = 'release_notes'
 

@@ -20,7 +20,7 @@ module ReleaseNotes
     method_option :force, :aliases => '-f',  :type => :boolean, :desc => 'overwrite files that already exist'
     method_option :increment, :aliases => '-i', :default => 'patch', :banner => 'MODE', :desc => 'increment version by mode - "major", "minor", "patch"'
     method_option :message, :aliases => '-m', :desc => 'interactive release note bullet input'
-    method_option :version, :aliases => '-V', :desc => 'use the given version number'
+    method_option :version, :aliases => '-v', :desc => 'use the given version number'
 
     def new
       if options[:version].nil?
@@ -47,7 +47,7 @@ module ReleaseNotes
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :no_log, :aliases => '-n', :type => :boolean, :default => false, :desc => 'disable README.md log of release notes'
     method_option :reset, :aliases => '-r', :type => :boolean, :default => false, :desc => 'delete all model entries and rebuilds them'
-    # method_option :version, :aliases => '-V', :desc => 'update only the given version number'
+    # method_option :version, :aliases => '-v', :desc => 'update only the given version number'
 
     def update
       # If reset option is passed delete all release notes in model

@@ -17,6 +17,14 @@ module ReleaseNotes
   mattr_accessor :broadcast_model
   @@broadcast_model = 'Broadcast'
 
+  # Model name of the model created to store users.
+  mattr_accessor :user_model
+  @@user_model = 'User'
+
+  # Model name of the model created to store broadcasts for users.
+  mattr_accessor :user_broadcast_model
+  @@user_broadcast_model = 'UserBroadcast'
+
   # Name of the folder where release notes are stored.
   mattr_accessor :release_note_folder
   @@release_note_folder = 'release_notes'

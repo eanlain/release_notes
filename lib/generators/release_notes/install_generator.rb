@@ -13,6 +13,10 @@ module ReleaseNotes
         template "release_notes.rb", "config/initializers/release_notes.rb"
       end
 
+      def copy_controller_decorator
+        template "release_notes_controller_decorator.rb", "app/decorators/controllers/release_notes/release_notes_controller_decorator.rb"
+      end
+
       def show_readme
         readme "README" if behavior == :invoke
       end

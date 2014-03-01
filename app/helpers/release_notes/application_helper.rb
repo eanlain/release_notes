@@ -15,7 +15,7 @@ module ReleaseNotes
                            :quote => true,
                            :footnotes => true]
 
-      render_options = [:filter_html => true,
+      render_options = [:filter_html => false,
                         :hard_wrap => true,
                         :prettify => true]
 

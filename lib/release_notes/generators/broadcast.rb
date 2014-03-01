@@ -15,7 +15,13 @@ module ReleaseNotes
       def set_local_assigns
         @subject = subject
         @body = body
-        @release_note_version = release_note_version.gsub('.', '_')
+
+        if release_note_version != ""
+          @release_note_version = release_note_version.gsub('.', '_')
+        else
+          @release_note_version = nil
+        end
+        
         @broadcast_template = 'broadcast_blank.md'
         @destination = File.expand_path(destination)
       end
