@@ -22,7 +22,7 @@ If you're looking to use ReleaseNotes with Rails you will need to run the instal
 
     $ rails generate release_notes:install
 
-The generator will install a ReleaseNotes initializer containing various configuration options and a ReleaseNotes controller stub. When you are done, you are ready to add a ReleaseNote model to using the following generator:
+The generator will install a ReleaseNotes initializer containing various configuration options and a ReleaseNotes controller decorator. When you are done, you are ready to add a ReleaseNote model to using the following generator:
 
     $ rails generate release_notes ReleaseNote
 
@@ -60,7 +60,7 @@ While not necessary, you may want to copy over the ReleaseNotes views to your ap
 
     $ rails generate release_notes:views
 
-If you do decide to customize the ReleaseNotes views and want to use your own layout you should probably **(1)** remove or comment out `layout 'release_notes/release_notes'` in `app/controllers/release_notes_controller.rb` and **(2)** add one of the following stylesheet_link_tag snippets to your view:
+If you do decide to customize the ReleaseNotes views and want to use your own layout you should probably **(1)** edit the layout declaration in `app/decorators/controllers/release_notes/release_notes_controller_decorator.rb` and **(2)** add one of the following stylesheet_link_tag snippets to your view:
 
     <%= stylesheet_link_tag "release_notes/application", media: "all" %>
 
