@@ -82,6 +82,8 @@ module ReleaseNotes
 
       # Collects relevant files and saves version and content to db
       update_files = collect_update_files(options[:destination])
+      update_files.reverse! if options[:reset]
+      
       update_files.each do |file|
         timestamp = file[0].to_i
 

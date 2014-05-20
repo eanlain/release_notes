@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "cucumber", "~> 1.3.10"
   spec.add_development_dependency "aruba", "~> 0.5.4"
 
-  spec.add_dependency "thor", "~> 0.18.1"
+  spec.add_dependency "thor", ">= 0.18.1"
   spec.add_dependency "rails", "> 3.0.0"
   spec.add_dependency "redcarpet", "~> 3.0.0"
 end
