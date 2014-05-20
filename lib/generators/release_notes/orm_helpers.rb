@@ -8,14 +8,6 @@ CONTENT
         buffer
       end
 
-      def broadcasts_model_contents
-        buffer = <<-CONTENT
-  validates :markdown, presence: true
-  validates :version, presence: true, uniqueness: true
-CONTENT
-        buffer
-      end
-
       private
 
         def model_exists?

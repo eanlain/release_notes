@@ -6,16 +6,10 @@ ReleaseNotes.setup do |config|
   # Name of the model you're using to store the various release notes.
   config.release_note_model = 'ReleaseNote'
 
-  # Name of the model you're using to store broadcasts.
-  config.broadcast_model = 'Broadcast'
-
   # Name of the model you're using to store users.
   config.user_model = 'User'
 
-  # Name of the model you're using to store broadcasts for users.
-  config.user_broadcast_model = 'UserBroadcast'
-
-  # Name of the folder you're using to store the release note and broadcast markdown files.
+  # Name of the folder you're using to store the release note markdown files.
   config.release_note_folder = 'release_notes'
 
   # Path that ReleaseNotes::Engine is mounted at in the config/routes.rb file.

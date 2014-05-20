@@ -2,15 +2,11 @@ require 'thor'
 require 'release_notes'
 require 'release_notes/version'
 require 'release_notes/versioning'
-require 'release_notes/cli/broadcast'
 require 'release_notes/cli/helpers'
 require 'release_notes/generators/release_note'
-require 'release_notes/generators/broadcast'
 
 module ReleaseNotes
   class CLI < Thor
-    register(Broadcast, 'broadcast', 'broadcast [COMMAND]', 'Create a new broadcast or update Broadcast models')
-
     package_name 'ReleaseNotes'
     map '-v' => :version
 
@@ -47,7 +43,6 @@ module ReleaseNotes
     method_option :destination, :aliases => '-d', :default => ReleaseNotes.release_note_folder, :desc => 'relative location of release note folder'
     method_option :no_log, :aliases => '-n', :type => :boolean, :default => false, :desc => 'disable README.md log of release notes'
     method_option :reset, :aliases => '-r', :type => :boolean, :default => false, :desc => 'delete all model entries and rebuilds them'
-    # method_option :version, :aliases => '-v', :desc => 'update only the given version number'
 
     def update
       # If reset option is passed delete all release notes in model
