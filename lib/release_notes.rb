@@ -13,10 +13,6 @@ module ReleaseNotes
   mattr_accessor :release_note_model
   @@release_note_model = 'ReleaseNote'
 
-  # Model name of the model created to store users.
-  mattr_accessor :user_model
-  @@user_model = 'User'
-
   # Name of the folder where release notes are stored.
   mattr_accessor :release_note_folder
   @@release_note_folder = 'release_notes'

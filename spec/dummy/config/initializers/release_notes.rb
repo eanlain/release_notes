@@ -1,7 +1,7 @@
 # Use this hook to configure ReleaseNotes.
 ReleaseNotes.setup do |config|
   # Name of your application.
-  config.app_name = 'Application Name Goes Here'
+  config.app_name = 'Demo App'
 
   # Name of the model you're using to store the various release notes.
   config.release_note_model = 'ReleaseNote'
@@ -13,5 +13,5 @@ ReleaseNotes.setup do |config|
   config.mount_at = 'release_notes'
 
   # Version number that the first ReleaseNote should start at.
-  config.starting_version = '0.1.0'
+  config.starting_version = '0.4.0'
 end
