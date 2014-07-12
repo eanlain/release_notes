@@ -9,6 +9,10 @@ module ReleaseNotes
       g.fixture_replacement   :factory_girl, :dir => 'spec/factories'
     end
 
+    rake_tasks do
+      load '../../tasks/release_notes.rake'
+    end
+
     initializer 'release_notes.action_controller' do |app|
       ActiveSupport.on_load :action_controller do
         helper ReleaseNotes::ApplicationHelper
