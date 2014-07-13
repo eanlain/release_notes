@@ -24,5 +24,11 @@ module ReleaseNotes
 
       mark.render(markdown)
     end
+
+    def release_note_indicator
+      latest = ReleaseNotes.release_note_model.constantize.last
+      
+      link_to "#{ReleaseNotes.app_name} v#{latest.version}", release_notes.version_path(:version => latest.version.gsub('.','_')), 'data-no-turbolink' => true unless latest.nil?
+    end
   end
 end

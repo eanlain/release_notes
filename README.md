@@ -22,7 +22,7 @@ If you're looking to use ReleaseNotes with Rails you will need to run the instal
 
     $ rails generate release_notes:install
 
-The generator will install a ReleaseNotes initializer containing various configuration options and a ReleaseNotes controller decorator. When you are done, you are ready to add a ReleaseNote model to using the following generator:
+The generator will install a ReleaseNotes initializer containing various configuration options. When you are done, you are ready to add a ReleaseNote model to using the following generator:
 
     $ rails generate release_notes ReleaseNote
 
@@ -65,6 +65,28 @@ If you ever want to update a previous release note and/or want to rebuild your R
 To get additional help on release_notes commands or to see all available options just run:
 
     $ release_notes --help [command]
+
+### Rake Tasks
+
+You can also run the `release_notes new`, `release_notes update`, and `release_notes update -r` commands using the following rake tasks from within the project:
+
+#### release_notes new
+
+    $ rake release_notes:new
+    
+#### release_notes update
+
+    $ rake release_notes:update
+
+#### release_notes update -r
+
+    $ rake release_notes:rebuild
+
+### Show the latest ReleaseNote version
+
+To access a link to the latest release note just include the following snippet into your view:
+
+    <%= release_note_indicator %>
 
 ### View release notes in your application
 

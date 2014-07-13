@@ -1,0 +1,57 @@
+# Demo App 0.5.0 Release Notes
+###### Dummy app added and testing framework updated.
+
+#### 07/03/2014
+
+Additions
+----
+* Added dummy app (/spec/dummy) to demo and test ReleaseNotes.
+* Added bootstrap-sass gem dependency.
+* Added controller and routing tests.
+
+Improvements
+----
+* Updated rspec.
+
+Removals
+----
+* Removed static bootstrap.js and bootstrap.css files.
+
+Fixes
+----
+* Fixed issue where after running `release_notes update -r` would return the index of ReleaseNotes in reverse order (oldest to newest).
+
+Upcoming
+----
+* Add generator tests. 
+* Add command line tests.
+
+*the end*
+
+---
+
+# Demo App 0.4.0 Release Notes
+###### Removal of Broadcast feature.
+
+#### 05/20/2014
+
+
+Changes
+----
+* Updated README.
+
+
+Removals
+----
+* Removed all files related to the Broadcast feature.
+
+
+
+Upcoming
+----
+* Adding tests... eventually.
+
+*the end*
+
+---
+
