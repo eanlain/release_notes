@@ -12,7 +12,6 @@ doc/
 lib/bundler/man
 pkg
 rdoc
-release_notes/
 spec/dummy/db/*.sqlite3
 spec/dummy/db/*.sqlite3-journal
 spec/dummy/log/*.log
