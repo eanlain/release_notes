@@ -1,11 +1,16 @@
 module ReleaseNotes
   class Engine < ::Rails::Engine
+    require 'bootstrap-sass'
+    
     isolate_namespace ReleaseNotes
 
-    config.to_prepare do
-      Dir.glob(Rails.root + "app/decorators/**/release_notes/*_decorator*.rb").each do |c|
-        require_dependency(c)
-      end
+    config.generators do |g|
+      g.test_framework        :rspec
+      g.fixture_replacement   :factory_girl, :dir => 'spec/factories'
+    end
+
+    rake_tasks do
+      load '../../tasks/release_notes.rake'
     end
 
     initializer 'release_notes.action_controller' do |app|
