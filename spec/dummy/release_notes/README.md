@@ -1,3 +1,51 @@
+# Demo App 1.0.0 Release Notes
+###### Full test coverage, I think...
+
+#### 07/15/2014
+
+Additions
+----
+* Added Cucumber generator tests.
+* Added Cucumber CLI tests.
+
+
+
+
+
+
+
+*the end*
+
+---
+
+# Demo App 0.5.1 Release Notes
+###### Added release_note_indicator helper.
+
+#### 07/13/2014
+
+Additions
+----
+* Added release_note_indicator helper.
+* Added release_note_indicator snippet to dummy app view.
+
+Changes
+----
+* Updated gemspec.
+* Updated README.
+
+Fixes
+----
+* Fixed a template error that occurred when trying to navigate to a specific release note by version.
+
+Upcoming
+----
+* Add generator tests.
+* Add command line tests.
+
+*the end*
+
+---
+
 # Demo App 0.5.1 Release Notes
 ###### Added release_note_indicator helper.
 

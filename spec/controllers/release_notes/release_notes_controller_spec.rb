@@ -48,7 +48,7 @@ module ReleaseNotes
       it "assigns @release_notes" do
         get :show, { version: @release_note.version, use_route: :release_notes }
 
-        expect(assigns(:release_notes)).to eq(@release_note)
+        expect(assigns(:release_notes)).to eq([@release_note])
       end
     end
   end

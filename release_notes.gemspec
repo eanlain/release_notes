@@ -25,7 +25,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency "bootstrap-sass", "~> 3.2.0"
   spec.add_dependency "redcarpet", "~> 3.0.0"
 
+  spec.add_development_dependency "pry-rails"
   spec.add_development_dependency "rspec-rails", "~> 3.0.0"
   spec.add_development_dependency "factory_girl_rails", "~> 4.4.1"
+  spec.add_development_dependency "aruba", "~> 0.6.0"
   spec.add_development_dependency "sqlite3"
 end

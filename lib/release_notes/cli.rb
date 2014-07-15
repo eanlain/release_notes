@@ -111,7 +111,7 @@ module ReleaseNotes
     desc 'version', 'Show version of release_notes'
 
     def version
-      puts "ReleaseNotes #{ReleaseNotes::VERSION}"
+      puts "ReleaseNotes v#{ReleaseNotes::VERSION}"
     end
 
 
