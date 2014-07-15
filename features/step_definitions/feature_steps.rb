@@ -6,8 +6,8 @@ Given /^a Rails app named "([^\"]*)" exists$/ do |app_name|
   step "I successfully run `rails new #{app_name}`"
 
   ENV["RAILS_ENV"] ||= "test"
-  require File.expand_path("../../../tmp/hello_world/config/environment.rb",  __FILE__)
-  ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + "/tmp/hello_world"
+  require File.expand_path("../../../tmp/#{app_name}/config/environment.rb",  __FILE__)
+  ENV["RAILS_ROOT"] ||= File.dirname(__FILE__) + "/tmp/#{app_name}"
   
   step "I cd to \"#{app_name}\""
 end
