@@ -1,4 +1,5 @@
 # ReleaseNotes
+[![Build Status](https://travis-ci.org/eanlain/release_notes.png)](https://travis-ci.org/eanlain/release_notes)
 
 An easy way to incorporate and manage release notes.
 
