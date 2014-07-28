@@ -10,7 +10,7 @@ module ReleaseNotes
     end
 
     rake_tasks do
-      load '../../tasks/release_notes.rake'
+      load File.expand_path('../../../tasks/release_notes.rake', __FILE__)
     end
 
     initializer 'release_notes.action_controller' do |app|
